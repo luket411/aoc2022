@@ -17,6 +17,12 @@ def part_1(input_data=practice):
 
 
 def part_2(input_data=practice):
+    """
+    For each range, check 
+        if end of first range is after the start of the second
+        AND
+        if end of second range is after start of first
+    """
     overlap = 0
     no_overlap = 0
     for pair in input_data.split("\n"):
@@ -31,6 +37,12 @@ def part_2(input_data=practice):
 
 # Function but 10x slower
 def part_2_2(input_data = practice):
+    """
+    1, Creates array of 100 zeros representing 100 sections
+    2, Increments value in array by 1 when section is cleaned by elf 1
+    3, Increments value in array by 1 when section is cleaned by elf 2
+    4, If any section has been cleaned twice, array will contain 2
+    """
     overlap = 0
     for pair in input_data.split("\n"):
         contents = np.zeros(101)
