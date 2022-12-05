@@ -1,4 +1,4 @@
-day1_practise = """1000
+day1_practice = """1000
 2000
 3000
 

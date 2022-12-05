@@ -1,4 +1,4 @@
-practise = """A Y
+practice = """A Y
 B X
 C Z"""
 

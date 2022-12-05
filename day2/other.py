@@ -1,1 +1,1 @@
-from data import practise, data as full_data
+from data import practice, data as full_data

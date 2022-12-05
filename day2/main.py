@@ -1,4 +1,4 @@
-from data import practise, data as full_data
+from data import practice, data as full_data
 
 translation_map_part_one = {
     "X":"R",
@@ -24,7 +24,7 @@ LOSES_TO = {
     'S':'R'
 }
 
-def part_1(input_data=practise):
+def part_1(input_data=practice):
     processed_data = [strategy.split(" ") for strategy in input_data.split("\n")]
     my_score = 0
     for [them, me] in processed_data:
@@ -49,7 +49,7 @@ translation_map_part_two = {
     "Z":"win"
 }
 
-def part_2(input_data=practise):
+def part_2(input_data=practice):
     processed_data = [strategy.split(" ") for strategy in input_data.split("\n")]
     my_score = 0
     for [them, strategy] in processed_data:

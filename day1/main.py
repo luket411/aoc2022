@@ -1,6 +1,6 @@
-from data import day1_practise, day1_data
+from data import day1_practice, day1_data
 
-def part_1(data=day1_practise):
+def part_1(data=day1_practice):
     calorie_counter = 0
     largest_calorie_count = 0
     for num_string in data.split("\n"):
@@ -13,7 +13,7 @@ def part_1(data=day1_practise):
     
     return largest_calorie_count
 
-def part_2(data=day1_practise):
+def part_2(data=day1_practice):
     calorie_counter = 0
     largest_calorie_count = [0, 0, 0]
     for num_string in data.split("\n"):

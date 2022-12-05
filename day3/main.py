@@ -1,7 +1,7 @@
-from data import practise, data as full_data
+from data import practice, data as full_data
 import string
 
-def part_1(input_data=practise):
+def part_1(input_data=practice):
     priority_sum = 0
     for rucksack_contents in input_data.split("\n"):
         
@@ -18,7 +18,7 @@ def part_1(input_data=practise):
     
     return priority_sum
         
-def part_2(input_data=practise):
+def part_2(input_data=practice):
     priority_sum = 0
     dataset = input_data.split("\n")
     dataset_size = len(dataset)

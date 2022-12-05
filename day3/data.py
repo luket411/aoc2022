@@ -1,4 +1,4 @@
-practise = """vJrwpWtwJgWrhcsFMMfFFhFp
+practice = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn

@@ -1,11 +1,11 @@
-from data import practise, full_data
+from data import practice, full_data
 import numpy as np
 
 def is_contained(range_1, range_2):
     return (int(range_1[0]) <= int(range_2[0])) and (int(range_1[1]) >= int(range_2[1]))
     
 
-def part_1(input_data=practise):
+def part_1(input_data=practice):
     num_pairs = 0
     for pair in input_data.split("\n"):
         range_1, range_2 = pair.split(",")
@@ -16,7 +16,7 @@ def part_1(input_data=practise):
     return num_pairs
 
 # This one doesnt work
-def part_2(input_data=practise):
+def part_2(input_data=practice):
     overlap = 0
     no_overlap = 0
     for pair in input_data.split("\n"):
@@ -28,7 +28,7 @@ def part_2(input_data=practise):
     return overlap
         
 # This one works
-def part_2_2(input_data = practise):
+def part_2_2(input_data = practice):
     overlap = 0
     for pair in input_data.split("\n"):
         contents = np.zeros(101)
@@ -62,7 +62,7 @@ def has_overlap_method_two(range_1, range_2):
     
     return 2 in contents
 
-def part_2_main(input_data = practise):
+def part_2_main(input_data = practice):
     for pair in input_data.split("\n"):
         range_1, range_2 = pair.split(",")
         range_1, range_2 = range_1.split("-"), range_2.split("-")
