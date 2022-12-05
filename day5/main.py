@@ -11,11 +11,8 @@ class CrateStack9000():
 
     def move(self, source, target, quantity):
         for _ in range(quantity):
-            self.swap(source, target)
-
-    def swap(self, source, target):
-        box = self.state[source].pop()
-        self.state[target].append(box)
+            box = self.state[source].pop()
+            self.state[target].append(box)
 
     def __str__(self) -> str:
         output = ""
@@ -28,15 +25,11 @@ class CrateStack9000():
         print("".join([boxes[-1] for boxes in self.state.values()]))
 
     def run(self, raw_instruction_set=practice_instruction_set):
-        instruction_set = []
         for raw_instruction in raw_instruction_set.split("\n"):
             split_instruction = raw_instruction.split(" ")
             quantity = int(split_instruction[1])
             source = int(split_instruction[3])
             target = int(split_instruction[5])
-            instruction_set.append([source, target, quantity])
-
-        for [source, target, quantity] in instruction_set:
             self.move(source, target, quantity)
 
 
@@ -47,9 +40,17 @@ class CrateStack9001(CrateStack9000):
 
 
 if __name__ == "__main__":
+    crate_stack_part_1_practice = CrateStack9000()
+    crate_stack_part_1_practice.run()
+    crate_stack_part_1_practice.get_top_pile()
+
     crate_stack_part_1 = CrateStack9000(init_state)
     crate_stack_part_1.run(instruction_set)
     crate_stack_part_1.get_top_pile()
+
+    crate_stack_part_2_practice = CrateStack9001()
+    crate_stack_part_2_practice.run()
+    crate_stack_part_2_practice.get_top_pile()
     
     crate_stack_part_2 = CrateStack9001(init_state)
     crate_stack_part_2.run(instruction_set)
