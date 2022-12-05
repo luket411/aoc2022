@@ -2,6 +2,21 @@ from data import practice_init_state, practice_instruction_set, init_state, inst
 
 class CrateStack9000():
     def __init__(self, raw_init_state=practice_init_state):
+        """
+        Takes init_state stirng like those in day5/data.py
+
+        Creates dictionary where the name of the stack maps to the list of boxes currently in that stack. The last item of the stack represents the "top" of the box stack
+        (yes it easily could be an array, I just wanted to be able to use the index's in the data directly and not have to worry about index 0)
+
+        {
+            1: ['A','B','C'],
+            2: ['D','E'],
+            3: ['F'],
+            4: [],
+            5: ['G', 'H']
+            ...
+        }
+        """
         init_state = raw_init_state.split("\n")
         data_raw, indexes_raw = init_state[:-1], init_state[-1]
         self.state = {}
