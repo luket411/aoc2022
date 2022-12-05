@@ -26,3 +26,7 @@ def part_2(data=day1_practice):
             calorie_counter += int(num_string)
     
     return sum(largest_calorie_count)
+
+if __name__ == "__main__":
+    print(part_1(day1_data))
+    print(part_2(day1_data))
