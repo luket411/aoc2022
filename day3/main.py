@@ -9,10 +9,6 @@ def part_1(input_data=practice):
         first_compartment, second_compartment = set(rucksack_contents[:compartment_size]), set(rucksack_contents[compartment_size:])
         
         match = list(first_compartment & second_compartment)
-        if len(match) != 1:
-            print(f"{first_compartment}::::{second_compartment}")
-            print(f"matches:{match}")
-            break
         
         priority_sum += string.ascii_letters.index(match[0]) + 1
     
